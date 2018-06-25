@@ -1,0 +1,35 @@
+[
+	{
+		"nome":"Cervejaria Sambaqui",
+		"lat":-27.5080527,
+		"long":-48.5196719,
+		"cervejas": {
+						{
+							"nome":"Brigitte Blondô",
+							"tipo":"Belgian Blond Ale",
+							"vol-alcool":6.5,
+							"ibu":19
+						},
+						{
+							"nome":"Lola Lupulina",
+							"tipo":"American Indian Pale Ale",
+							"vol-alcool":7.5,
+							"ibu":65
+						},
+						{
+							"nome":"Sicília Wit",
+							"tipo":"Lemon Wit",
+							"vol-alcool":5.0,
+							"ibu":14
+						},
+						{
+							"nome":"Maria da Lenha",
+							"tipo":"Rauchbier",
+							"vol-alcool":5.5,
+							"ibu":24
+						}
+					}
+
+	}
+
+]
