@@ -1,6 +1,8 @@
 [
   {
+    "id":0,
     "nome": "Cervejaria Sambaqui",
+    "brewery-icon":"sambaqui_icon.jpg",
     "lat": -27.5080527,
     "long": -48.5196719,
     "cervejas": [
@@ -31,7 +33,9 @@
     ]
   },
   {
+    "id":1,
     "nome": "The Liffey Brew Pub",
+    "brewery-icon":"liffey_icon.jpg",
     "lat": -27.6230334,
     "long": -48.678662,
     "cervejas": [
@@ -62,7 +66,9 @@
     ]
   },
   {
+    "id":2,
     "nome": "Cervejaria Kairós",
+    "brewery-icon":"kairos_icon.jpg",
     "lat": -27.4730463,
     "long": -48.4455757,
     "cervejas": [
