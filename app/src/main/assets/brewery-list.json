@@ -1,35 +1,95 @@
 [
-	{
-		"nome":"Cervejaria Sambaqui",
-		"lat":-27.5080527,
-		"long":-48.5196719,
-		"cervejas": {
-						{
-							"nome":"Brigitte Blondô",
-							"tipo":"Belgian Blond Ale",
-							"vol-alcool":6.5,
-							"ibu":19
-						},
-						{
-							"nome":"Lola Lupulina",
-							"tipo":"American Indian Pale Ale",
-							"vol-alcool":7.5,
-							"ibu":65
-						},
-						{
-							"nome":"Sicília Wit",
-							"tipo":"Lemon Wit",
-							"vol-alcool":5.0,
-							"ibu":14
-						},
-						{
-							"nome":"Maria da Lenha",
-							"tipo":"Rauchbier",
-							"vol-alcool":5.5,
-							"ibu":24
-						}
-					}
-
-	}
-
+  {
+    "nome": "Cervejaria Sambaqui",
+    "lat": -27.5080527,
+    "long": -48.5196719,
+    "cervejas": [
+      {
+        "nome": "Brigitte Blondô",
+        "tipo": "Belgian Blond Ale",
+        "abv": 6.5,
+        "ibu": 19
+      },
+      {
+        "nome": "Lola Lupulina",
+        "tipo": "American Indian Pale Ale",
+        "abv": 7.5,
+        "ibu": 65
+      },
+      {
+        "nome": "Sicília Wit",
+        "tipo": "Lemon Wit",
+        "abv": 5.0,
+        "ibu": 14
+      },
+      {
+        "nome": "Maria da Lenha",
+        "tipo": "Rauchbier",
+        "abv": 5.5,
+        "ibu": 24
+      }
+    ]
+  },
+  {
+    "nome": "The Liffey Brew Pub",
+    "lat": -27.6230334,
+    "long": -48.678662,
+    "cervejas": [
+      {
+        "nome": "Liffey Pedra Branca",
+        "tipo": "Witbier",
+        "abv": 4.8,
+        "ibu": 19
+      },
+      {
+        "nome": "Liffey Devil",
+        "tipo": "Irish Red Ale",
+        "abv": 5.2,
+        "ibu": 22
+      },
+      {
+        "nome": "Liffey Pilsen",
+        "tipo": "Premium American Lager",
+        "abv": 5.1,
+        "ibu": 15
+      },
+      {
+        "nome": "Liffey Black Jack",
+        "tipo": "Dry Stout",
+        "abv": 4.2,
+        "ibu": 33
+      }
+    ]
+  },
+  {
+    "nome": "Cervejaria Kairós",
+    "lat": -27.4730463,
+    "long": -48.4455757,
+    "cervejas": [
+      {
+        "nome": "Kapital",
+        "tipo": "Cream Ale",
+        "abv": 4.5,
+        "ibu": 15
+      },
+      {
+        "nome": "Ipaguaçu",
+        "tipo": "Indian Pale Ale",
+        "abv": 6.5,
+        "ibu": 50
+      },
+      {
+        "nome": "Boitatá",
+        "tipo": "Dry Stout",
+        "abv": 4.6,
+        "ibu": 26
+      },
+      {
+        "nome": "Baleeira",
+        "tipo": "Red Ale",
+        "abv": 4.2,
+        "ibu": 33
+      }
+    ]
+  }
 ]
