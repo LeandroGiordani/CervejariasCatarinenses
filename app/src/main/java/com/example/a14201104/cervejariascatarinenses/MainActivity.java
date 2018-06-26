@@ -1,5 +1,6 @@
 package com.example.a14201104.cervejariascatarinenses;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -18,14 +19,12 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements
-        LoaderManager.LoaderCallbacks<Cursor>, BreweryAdapter.AdapterOnClickHandler {
+public class MainActivity extends AppCompatActivity implements BreweryAdapter.AdapterOnClickHandler {
 
     public static final String TAG = MainActivity.class.getSimpleName();
-
-    private static final int ID_BREWERY_LOADER = 7;
 
     private RecyclerView mRecyclerView;
     private BreweryAdapter mAdapter;
@@ -45,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements
                 new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.setHasFixedSize(true);
+        breweryList = new ArrayList<>();
 
         try {
             JSONArray jsonArray = new JSONArray(loadJsonFromAsset());
@@ -63,8 +63,6 @@ public class MainActivity extends AppCompatActivity implements
 
         mAdapter = new BreweryAdapter(this, breweryList, this);
         mRecyclerView.setAdapter(mAdapter);
-
-        getSupportLoaderManager().initLoader(ID_BREWERY_LOADER, null, this);
     }
 
     private String loadJsonFromAsset() {
@@ -86,24 +84,11 @@ public class MainActivity extends AppCompatActivity implements
         return json;
     }
 
-    @NonNull
-    @Override
-    public Loader<Cursor> onCreateLoader(int i, @Nullable Bundle bundle) {
-        return null;
-    }
-
-    @Override
-    public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor cursor) {
-
-    }
-
-    @Override
-    public void onLoaderReset(@NonNull Loader<Cursor> loader) {
-
-    }
-
     @Override
     public void onClick(int id) {
+        Intent breweryDetail = new Intent(MainActivity.this, BreweryDetailActivity.class);
+        breweryDetail.putExtra("id", id);
+        startActivity(breweryDetail);
 
     }
 }

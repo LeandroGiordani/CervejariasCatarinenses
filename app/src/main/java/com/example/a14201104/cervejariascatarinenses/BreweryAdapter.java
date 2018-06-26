@@ -1,7 +1,6 @@
 package com.example.a14201104.cervejariascatarinenses;
 
 import android.content.Context;
-import android.database.Cursor;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,21 +8,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.util.Collections;
 import java.util.List;
 
 public class BreweryAdapter extends RecyclerView.Adapter<BreweryAdapter.AdapterViewHolder> {
 
     private final Context mContext;
 
-    private Cursor mCursor;
-
     private LayoutInflater inflater;
 
     final private AdapterOnClickHandler mClickHandler;
 
-    List<DataBrewery> dataBreweries = Collections.emptyList();
+    List<DataBrewery> dataBreweries;
     DataBrewery current;
     int currentPos = 0;
 
@@ -42,6 +37,7 @@ public class BreweryAdapter extends RecyclerView.Adapter<BreweryAdapter.AdapterV
     @NonNull
     @Override
     public AdapterViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        Context context = viewGroup.getContext();
         View view = inflater.inflate(R.layout.brewery_list_item, viewGroup, false);
         view.setFocusable(true);
 
@@ -50,7 +46,6 @@ public class BreweryAdapter extends RecyclerView.Adapter<BreweryAdapter.AdapterV
 
     @Override
     public void onBindViewHolder(@NonNull AdapterViewHolder adapterViewHolder, int position) {
-        mCursor.moveToPosition(position);
 
         current = dataBreweries.get(position);
         adapterViewHolder.breweryIcon.setImageResource(R.drawable.ic_launcher_background);
@@ -59,9 +54,7 @@ public class BreweryAdapter extends RecyclerView.Adapter<BreweryAdapter.AdapterV
 
     @Override
     public int getItemCount() {
-        if (mCursor == null)
-            return 0;
-        return mCursor.getCount();
+        return dataBreweries.size();
     }
 
     class AdapterViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -81,7 +74,7 @@ public class BreweryAdapter extends RecyclerView.Adapter<BreweryAdapter.AdapterV
         @Override
         public void onClick(View view) {
             int adapterPosition = getAdapterPosition();
-            mCursor.moveToPosition(adapterPosition);
+            mClickHandler.onClick(adapterPosition);
         }
     }
 }
