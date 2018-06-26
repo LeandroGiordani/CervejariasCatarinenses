@@ -7,6 +7,7 @@ public class DataBrewery {
     public int breweryId;
     public String breweryName;
     public String icon;
+    public String description;
     public long latitute;
     public long longitude;
     public List<Beers> cervejas;
