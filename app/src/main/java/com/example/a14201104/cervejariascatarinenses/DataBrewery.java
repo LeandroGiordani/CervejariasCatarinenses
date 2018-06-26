@@ -13,7 +13,7 @@ public class DataBrewery {
     public List<Beers> cervejas;
 
 
-    public class Beers {
+    public static class Beers {
         public String beerName;
         public String tipo;
         public double abv;

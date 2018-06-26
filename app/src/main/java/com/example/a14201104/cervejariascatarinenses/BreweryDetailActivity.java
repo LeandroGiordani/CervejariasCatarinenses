@@ -63,17 +63,17 @@ public class BreweryDetailActivity extends AppCompatActivity {
             JSONObject breweryJson = jsonArray.getJSONObject(breweryId);
             breweryDescription.setText(breweryJson.getString("description"));
 
-
-            for (int i = 0; i < jsonArray.length(); i++) {
-                DataBrewery dataBrewery = new DataBrewery();
-                dataBrewery.icon = breweryJson.getString("brewery-icon");
-                dataBrewery.breweryName = breweryJson.getString("nome");
-                //breweryList.add(dataBrewery);
+            JSONArray beersArray = new JSONArray(breweryJson.getString("cervejas"));
+            for (int i = 0; i < beersArray.length(); i++) {
+                beer = new DataBrewery.Beers();
+                beer.beerName = breweryJson.getString("nome");
+                beersList.add(beer);
             }
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        //beer1.setText(beersList.get());
 
 
     }
