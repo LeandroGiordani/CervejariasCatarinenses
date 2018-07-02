@@ -4,8 +4,8 @@
     "nome": "Cervejaria Sambaqui",
     "brewery-icon":"sambaqui_icon.jpg",
     "description":"Nascida em abril de 2013, em Florianópolis, a Cerveja Sambaqui é produzida de forma artesanal sempre prezando pela qualidade das matérias-primas e inovação na elaboração das receitas. Sua característica é manter as tradições, porém realizar experiências através de insumos regionais buscando excelência no sabor da cerveja.",
-    "lat": -27.5080527,
-    "long": -48.5196719,
+    "endereco":"Rua Quinze de Novembro, 181 - Florianópolis",
+    "video":"dQw4w9WgXcQ",
     "cervejas": [
       {
         "nome": "Brigitte Blondô",
@@ -38,8 +38,8 @@
     "nome": "The Liffey Brew Pub",
     "brewery-icon":"liffey_icon.jpg",
     "description":"Aos apreciadores de cervejas especiais, um ambiente aconchegante e com a gastronomia verdadeira de um Irish Pub na Pedra Branca.",
-    "lat": -27.6230334,
-    "long": -48.678662,
+    "endereco":"R. da Universidade, 27 - Passeio Pedra Branca, Palhoça",
+    "video":"u6tc3gZSULM",
     "cervejas": [
       {
         "nome": "Liffey Pedra Branca",
@@ -71,9 +71,9 @@
     "id":2,
     "nome": "Cervejaria Kairós",
     "brewery-icon":"kairos_icon.jpg",
-    "description":"A Cervejaria Kairós nasceu do sonho de três amigos empreendedores e grandes apreciadores de cervejas especiais. O desejo era construir uma autêntica cerveja made in Floripa. Em 2011, os projetos para viabilizar este grande sonho começaram a tomar forma. Cinco anos depois, com a formatação de um grupo de investidores, a Kairós, junto aos seus três fundadores, começou as operações de fabricação e comercialização de suas cervejas. Atualmente, são seis estilos de cervejas lançados, a Cream Ale, Red Ale, Weiss, American IPA, Stout e Witbier, todas produzidas com alto padrão de qualidade. O conceito da Kairós é baseado em tudo que permeia a cidade de Florianópolis, como a cultura, lendas, lugares, monumentos e arquitetura. A ideia é levar toda essa informação sobre a cidade aos apreciadores de cervejas especiais de todo o Brasil e resgatar nos moradores da Ilha essas belas memórias. Deguste uma Kairós, a cerveja que tem a magia da Ilha!",
-    "lat": -27.4730463,
-    "long": -48.4455757,
+    "description":"O conceito da Kairós é baseado em tudo que permeia a cidade de Florianópolis, como a cultura, lendas, lugares, monumentos e arquitetura. A ideia é levar toda essa informação sobre a cidade aos apreciadores de cervejas especiais de todo o Brasil e resgatar nos moradores da Ilha essas belas memórias. Deguste uma Kairós, a cerveja que tem a magia da Ilha!",
+    "endereco":"Estrada Cristóvão Machado de Campos, 2741, Florianópolis",
+    "video":"w87EY8r9hOY",
     "cervejas": [
       {
         "nome": "Kapital",

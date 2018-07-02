@@ -8,8 +8,8 @@ public class DataBrewery {
     public String breweryName;
     public String icon;
     public String description;
-    public long latitute;
-    public long longitude;
+    public String endereco;
+    public String videoUrlId;
     public List<Beers> cervejas;
 
 

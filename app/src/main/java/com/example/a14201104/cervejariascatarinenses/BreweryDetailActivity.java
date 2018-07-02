@@ -1,9 +1,12 @@
 package com.example.a14201104.cervejariascatarinenses;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -18,11 +21,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BreweryDetailActivity extends AppCompatActivity {
+    private static final String TAG = BreweryDetailActivity.class.getSimpleName();
 
     private int breweryId;
 
-    DataBrewery brewery;
-    DataBrewery.Beers beer;
+    private DataBrewery brewery;
+    private DataBrewery.Beers beer;
     private List<DataBrewery.Beers> beersList;
 
     private ImageView breweryImage;
@@ -33,9 +37,6 @@ public class BreweryDetailActivity extends AppCompatActivity {
     private TextView beer4;
     private Button findBrewery;
     private Button videoBrewery;
-
-    private int latitude;
-    private int longitude;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +62,10 @@ public class BreweryDetailActivity extends AppCompatActivity {
         try {
             JSONArray jsonArray = new JSONArray(loadJsonFromAsset());
             JSONObject breweryJson = jsonArray.getJSONObject(breweryId);
-            breweryDescription.setText(breweryJson.getString("description"));
+            brewery = new DataBrewery();
+            brewery.description = breweryJson.getString("description");
+            brewery.endereco = breweryJson.getString("endereco");
+            brewery.videoUrlId = breweryJson.getString("video");
 
             JSONArray beersArray = new JSONArray(breweryJson.getString("cervejas"));
             for (int i = 0; i < beersArray.length(); i++) {
@@ -73,6 +77,7 @@ public class BreweryDetailActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        breweryDescription.setText(brewery.description);
         //beer1.setText(beersList.get());
 
 
@@ -94,5 +99,30 @@ public class BreweryDetailActivity extends AppCompatActivity {
             return null;
         }
         return json;
+    }
+
+    public void onClickOpenAddressButton(View v) {
+        Uri addressUri = Uri.parse("geo:0,0?q=" + brewery.endereco);
+
+        Intent intentForMap = new Intent(Intent.ACTION_VIEW);
+        intentForMap.setData(addressUri);
+
+        if (intentForMap.resolveActivity(getPackageManager()) != null)
+            startActivity(intentForMap);
+        else
+            Log.d(TAG, "Nenhum aplicativo de mapa instalado");
+    }
+
+    public void onClickOpenVideo(View v) {
+        Intent appIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("vnd.youtube:" + brewery.videoUrlId));
+        Intent webIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("http://www.youtube.com/watch?v=" + brewery.videoUrlId));
+
+        try {
+            this.startActivity(appIntent);
+        } catch (ActivityNotFoundException ex) {
+            this.startActivity(webIntent);
+        }
     }
 }

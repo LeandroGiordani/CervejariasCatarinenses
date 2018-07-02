@@ -80,7 +80,6 @@ public class MainActivity extends AppCompatActivity implements BreweryAdapter.Ad
             e.printStackTrace();
             return null;
         }
-        Log.d(TAG, "json oblect: " + json.length());
         return json;
     }
 
