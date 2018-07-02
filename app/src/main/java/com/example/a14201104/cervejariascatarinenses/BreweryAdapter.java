@@ -20,7 +20,6 @@ public class BreweryAdapter extends RecyclerView.Adapter<BreweryAdapter.AdapterV
 
     List<DataBrewery> dataBreweries;
     DataBrewery current;
-    int currentPos = 0;
 
     public interface AdapterOnClickHandler {
         void onClick(int id);
@@ -37,7 +36,6 @@ public class BreweryAdapter extends RecyclerView.Adapter<BreweryAdapter.AdapterV
     @NonNull
     @Override
     public AdapterViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        Context context = viewGroup.getContext();
         View view = inflater.inflate(R.layout.brewery_list_item, viewGroup, false);
         view.setFocusable(true);
 
@@ -48,8 +46,13 @@ public class BreweryAdapter extends RecyclerView.Adapter<BreweryAdapter.AdapterV
     public void onBindViewHolder(@NonNull AdapterViewHolder adapterViewHolder, int position) {
 
         current = dataBreweries.get(position);
-        adapterViewHolder.breweryIcon.setImageResource(R.drawable.ic_launcher_background);
+        adapterViewHolder.breweryIcon.setImageResource(getIconIdentifier(current.icon));
         adapterViewHolder.breweryName.setText(current.breweryName);
+    }
+
+    private int getIconIdentifier(String iconTitle) {
+        return mContext.getResources().getIdentifier(iconTitle, "drawable",
+                mContext.getPackageName());
     }
 
     @Override

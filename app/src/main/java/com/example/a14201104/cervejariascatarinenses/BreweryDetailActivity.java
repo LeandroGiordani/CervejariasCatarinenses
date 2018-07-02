@@ -59,6 +59,18 @@ public class BreweryDetailActivity extends AppCompatActivity {
         if (intentFromMain.hasExtra("id"))
             breweryId = intentFromMain.getIntExtra("id", 0);
 
+        switch (breweryId) {
+            case 0:
+                breweryImage.setImageResource(R.drawable.cervejaria_sambaqui);
+                break;
+            case 1:
+                breweryImage.setImageResource(R.drawable.the_liffey_brew_pub);
+                break;
+            case 2:
+                breweryImage.setImageResource(R.drawable.cervejaria_kairos);
+                break;
+        }
+
         try {
             JSONArray jsonArray = new JSONArray(loadJsonFromAsset());
             JSONObject breweryJson = jsonArray.getJSONObject(breweryId);

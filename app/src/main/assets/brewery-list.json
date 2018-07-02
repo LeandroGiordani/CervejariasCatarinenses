@@ -2,7 +2,7 @@
   {
     "id":0,
     "nome": "Cervejaria Sambaqui",
-    "brewery-icon":"sambaqui_icon.jpg",
+    "brewery-icon":"cervejaria_sambaqui_icon",
     "description":"Nascida em abril de 2013, em Florianópolis, a Cerveja Sambaqui é produzida de forma artesanal sempre prezando pela qualidade das matérias-primas e inovação na elaboração das receitas. Sua característica é manter as tradições, porém realizar experiências através de insumos regionais buscando excelência no sabor da cerveja.",
     "endereco":"Rua Quinze de Novembro, 181 - Florianópolis",
     "video":"dQw4w9WgXcQ",
@@ -36,7 +36,7 @@
   {
     "id":1,
     "nome": "The Liffey Brew Pub",
-    "brewery-icon":"liffey_icon.jpg",
+    "brewery-icon":"the_liffey_brew_pub_icon",
     "description":"Aos apreciadores de cervejas especiais, um ambiente aconchegante e com a gastronomia verdadeira de um Irish Pub na Pedra Branca.",
     "endereco":"R. da Universidade, 27 - Passeio Pedra Branca, Palhoça",
     "video":"u6tc3gZSULM",
@@ -70,7 +70,7 @@
   {
     "id":2,
     "nome": "Cervejaria Kairós",
-    "brewery-icon":"kairos_icon.jpg",
+    "brewery-icon":"cervejaria_kairos_icon",
     "description":"O conceito da Kairós é baseado em tudo que permeia a cidade de Florianópolis, como a cultura, lendas, lugares, monumentos e arquitetura. A ideia é levar toda essa informação sobre a cidade aos apreciadores de cervejas especiais de todo o Brasil e resgatar nos moradores da Ilha essas belas memórias. Deguste uma Kairós, a cerveja que tem a magia da Ilha!",
     "endereco":"Estrada Cristóvão Machado de Campos, 2741, Florianópolis",
     "video":"w87EY8r9hOY",
